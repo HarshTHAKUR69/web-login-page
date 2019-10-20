@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header
+{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(banner1.jpg);
+
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=password]
+{
+ width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+<h2>Responsive Contact Section</h2>
+<p><b><i>“You're an interesting species.<br>
+An interesting mix. <br>
+You're capable of such beautiful dreams, <br>
+and such horrible nightmares. <br>
+You feel so lost, <br>
+so cut off, so alone, <br>
+only you're not. <br>
+See, in all our searching, <br>
+the only thing we've found that makes the emptiness bearable, <br>
+is each other.”<br> </b></i> </p>
+</header>
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>Swing by for a cup of protien shake, or leave us a message:</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="img2.jpg" style="width:100%">
+    </div>
+    <div class="column">
+  <header>
+    <form action="/action_page.php" name="myform" method="post" onsubmit="return validate()">
+        <label for="fname">User Name</label>
+        <input type="text" id="fname" name="username" placeholder="Your name..">
+       
+        <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Your Password..">
+      
+        <input type="submit" value="Log in">
+   
+<div>
+<p><h1>
+New User?</h1> <a href="sign.html" style="color:#000000;">Sign up here</a>
+</p>
+</div>
+        
+</header>
+      </form>
+
+    </div>
+  </div>
+</div>
+<script>
+function validate(){
+var name=document.myform.username.value;  
+ 
+var password=document.myform.password.value;  
+
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+
+  
+ 
+}
+</script>
+
+</body>
+</html>
